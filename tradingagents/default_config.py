@@ -1,0 +1,5 @@
+from __future__ import annotations
+import os
+from pathlib import Path
+PROJECT_DIR = str(Path(__file__).resolve().parent.parent)
+DEFAULT_CONFIG = {'project_dir': PROJECT_DIR, 'results_dir': os.getenv('TRADINGAGENTS_RESULTS_DIR', './results'), 'data_dir': os.getenv('TRADINGAGENTS_DATA_DIR', os.path.join(PROJECT_DIR, 'data')), 'macro_data_source': 'fred', 'use_enhanced_regime_detector': True, 'llm_provider': os.getenv('LLM_PROVIDER', 'deepseek'), 'deep_think_llm': os.getenv('DEEP_THINK_LLM', 'deepseek-reasoner'), 'quick_think_llm': os.getenv('QUICK_THINK_LLM', 'deepseek-chat'), 'backend_url': os.getenv('LLM_BACKEND_URL', 'https://api.deepseek.com'), 'llm_request_timeout_seconds': 90.0, 'llm_request_retries': 2, 'enable_parallel_analysts': True, 'enable_conflict_mediation': True, 'enable_report_summarization': False, 'enable_decision_tracking': True, 'decision_audit_dir': 'results/decision_audits', 'max_position_pct': 30.0, 'risk_veto_enabled': True, 'single_name_cap': 0.08, 'portfolio_vol_target': 0.12}

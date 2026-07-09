@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trading-agents-extension"
+version = "0.1.0"
+description = "Extension layers for multi-agent LLM trading research: macro regime, layered decisions, risk framework, and report quality tools."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Vincent Liu" }]
+keywords = [
+  "trading-agents",
+  "multi-agent",
+  "llm",
+  "macro",
+  "risk-management",
+  "quant-research",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "yfinance>=0.2.40",
+  "scipy>=1.10",
+  "python-dotenv>=1.0",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+fred = ["fredapi>=0.5.1"]
+llm = [
+  "langchain-core>=0.3",
+  "langgraph>=0.2",
+  "langchain-openai>=0.2",
+]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/xzliuxz/Trading-agents-extension"
+Upstream = "https://github.com/TauricResearch/TradingAgents"
+
+[tool.setuptools.packages.find]
+include = ["tradingagents*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,24 @@
+TradingAgents Extension
+Copyright 2025-2026 Vincent Liu (xzliuxz)
+
+This project contains original extension modules for multi-agent trading research
+(macro regime, layered decision architecture, risk framework, report quality tools).
+
+ACKNOWLEDGEMENT — UPSTREAM PROJECT
+---------------------------------
+This work is inspired by and designed to interoperate with the popular
+open-source project:
+
+  TradingAgents — Multi-Agents LLM Financial Trading Framework
+  https://github.com/TauricResearch/TradingAgents
+  Copyright Tauric Research and contributors
+  Licensed under the Apache License, Version 2.0
+
+TradingAgents is a widely used multi-agent LLM trading research framework.
+This repository is NOT an official release, fork dump, or endorsement by
+Tauric Research. It ships research extension layers and compatibility stubs
+only, and reuses the `tradingagents` import namespace for interoperability.
+
+Paper / citation for the original framework:
+  Xiao, Y., et al. "TradingAgents: Multi-Agents LLM Financial Trading Framework"
+  arXiv:2412.20138

@@ -1,0 +1,18 @@
+# Core (required for institutional framework demos)
+numpy>=1.24
+pandas>=2.0
+yfinance>=0.2.40
+scipy>=1.10
+python-dotenv>=1.0
+rich>=13.0
+
+# Optional: FRED macro series (falls back when missing)
+fredapi>=0.5.1
+
+# Optional: LLM / LangGraph nodes (regime_bridge, conflict_mediator, macro LLM path)
+langchain-core>=0.3
+langgraph>=0.2
+langchain-openai>=0.2
+
+# Optional: portfolio helpers used by some risk utilities
+# PyPortfolioOpt>=1.5.0
